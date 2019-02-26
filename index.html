@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prototipo</title>
+    <meta name="apple-mobile-web-app-capable">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+</head>
+<body>
+    
+    <a-scene id="canvas"  class="fullscreen">
+        <a-assets>
+            <video id="video" autoplay loop="true" src="video/PRUEBA.mp4" webkit-playsinline></video>
+        </a-assets>
+        <!--<a-text  value="Bienvenidos" width="6" position="-2.5 0.25 -1.5"></a-text>-->
+        <!--<a-video src="#video" width="16" height="9" position="0 1 -10"></a-video>-->
+        <a-sky src="#video"></a-sky>
+    </a-scene>
+    
+</body>
+</html>
