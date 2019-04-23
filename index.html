@@ -1,20 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Prototipo</title>
     <meta name="apple-mobile-web-app-capable">
+    <link rel="stylesheet" href="main.css">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 </head>
+
 <body>
-    
-    <a-scene id="canvas"  class="fullscreen">
-        <a-assets>
+
+    <a-scene id="canvas" class="fullscreen" style="background-color:black">
+        <!--
+            <a-assets>
             <video id="video" autoplay loop="true" src="video/galus.mp4" webkit-playsinline></video>
         </a-assets>
-        <!--<a-text  value="Bienvenidos" width="6" position="-2.5 0.25 -1.5"></a-text>-->
-        <!--<a-video src="#video" width="16" height="9" position="0 1 -10"></a-video>-->
+        <a-text  value="Bienvenidos" width="6" position="-2.5 0.25 -1.5"></a-text>
+        <a-video src="#video" width="16" height="9" position="0 1 -10"></a-video>
         <a-sky src="#video"></a-sky>
+        -->
+
+        <a-box class="box" width="3" height="3" depth="0.1" position="0 2 5" src="#texture">
+            <a-text value="Portugal" width="3" position="0 1 5"></a-text>
+        </a-box>
+
+        <a-box class="box" width="3" height="3" depth="0.1" position="-4 2 5" src="#texture">
+            <a-text value="Portugal" width="3" position="0 1 5"></a-text>
+        </a-box>
+
+        <a-box class="box" width="3" height="3" depth="0.1" position="4 2 5" src="#texture">
+            <a-text value="Portugal" width="3" position="0 1 5"></a-text>
+        </a-box>
+
+        <a-video src="#video" width="16" height="9" position="0 1 -10"></a-video>
+
+        <a-camera position="0 1 0">
+            <a-cursor color="#ffffff"></a-cursor>
+        </a-camera>
     </a-scene>
-    
+
+
+    <script>
+        var box = document.querySelector('a-box');
+        var background = document.querySelector('.background');
+        box.addEventListener("mouseenter", function () {
+            background.setAttribute("src", "./img/cr7parteDos.jpg");
+        });
+    </script>
+
 </body>
+
 </html>
