@@ -1,69 +1,59 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Prototipo</title>
+    <title>Molas</title>
     <meta name="apple-mobile-web-app-capable">
     <link rel="stylesheet" href="main.css">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
 </head>
-
 <body>
-
-    <a-scene id="canvas" class="fullscreen" style="background-color:black">
+    <a-scene id="canvas" class="fullscreen" color="black">
         <!--
-            <a-assets>
+        <a-assets>
             <video id="video" autoplay loop="true" src="video/galus.mp4" webkit-playsinline></video>
         </a-assets>
         <a-text  value="Bienvenidos" width="6" position="-2.5 0.25 -1.5"></a-text>
         <a-video src="#video" width="16" height="9" position="0 1 -10"></a-video>
-        <a-sky src="#video"></a-sky>
         -->
 
+        <!--Load assets-->
         <a-assets>
-            <img id="texture" src="img/penguin.jpg" alt="">
-            <img id="texture2" src="img/sloth.jpg" alt="">
-            <img id="texture3" src="img/starfish.jpg" alt="">
-
+            <img id="penguin" src="img/penguin.jpg" alt="">
+            <img id="sloth" src="img/sloth.jpg" alt="">
+            <img id="starfish" src="img/starfish.jpg" alt="">
             <video id="video" autoplay loop="true" src="video/molas.mp4" webkit-playsinline></video>
-
-            
         </a-assets>
 
-        
-
-        <a-sky class="background" src="" color="#0c0c0c" position="0 1 0" rotation="0 -115 0"></a-sky>
+        <!-- elements-->
+        <a-sky class="background" src="" color="black" position="0 1 0" rotation="0 -115 0"></a-sky>
 
         <a-video src="#video" width="16" height="9" position="0 1 -10"></a-video>
 
-        <a-box class="box1" width="3" height="3" depth="0.1" position="0 2 5" src="#texture">
+        <a-box class="box-penguin" width="3" height="3" depth="0.1" position="0 2 5" src="#penguin">
             <a-text value="Portugal" width="3" position="0 1 5" style="background-color:brown"> </a-text>
         </a-box>
 
-        <a-box class="box2" width="3" height="3" depth="0.1" position="-4 2 5" src="#texture2">
+        <a-box class="box-sloth" width="3" height="3" depth="0.1" position="-4 2 5" src="#sloth">
             <a-text value="Portugal" width="3" position="0 1 5"></a-text>
         </a-box>
 
-        <a-box class="box3" width="3" height="3" depth="0.1" position="4 2 5" src="#texture3">
+        <a-box class="box-starfish" width="3" height="3" depth="0.1" position="4 2 5" src="#starfish">
             <a-text value="Portugal" width="3" position="0 1 5"></a-text>
         </a-box>
 
-        
-
+        <!--Control-->
         <a-camera position="0 1 0">
             <a-cursor fuse="true" color="#ffffff"></a-cursor>
         </a-camera>
     </a-scene>
 
-
     <script>
-        var box = document.querySelector('.box1');
+        var box = document.querySelector('.box-penguin');
         var background = document.querySelector('.background');
         box.addEventListener("click", function () {
             background.setAttribute("src", "./video/galus.mp4");
+            background.setAttribute("color", "transparent");
         });
     </script>
-
 </body>
-
 </html>
