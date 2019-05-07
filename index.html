@@ -5,6 +5,7 @@
     <meta name="apple-mobile-web-app-capable">
     <link rel="stylesheet" href="main.css">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
     <a-scene id="canvas" class="fullscreen" color="black">
@@ -21,8 +22,8 @@
             <img id="penguin" src="img/penguin.jpg" alt="">
             <img id="sloth" src="img/sloth.jpg" alt="">
             <img id="starfish" src="img/starfish.jpg" alt="">
-            <video id="video" autoplay loop="true" src="video/1200.mp4" webkit-playsinline></video>
-        </a-assets>
+            <video id="video" autoplay loop="true" src="video/1200.mp4" webkit-playsinline playsinline></video>
+        </a-assets> 
 
         <a-videosphere src="#video"></a-videosphere>
 
