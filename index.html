@@ -21,13 +21,13 @@
             <img id="penguin" src="img/penguin.jpg" alt="">
             <img id="sloth" src="img/sloth.jpg" alt="">
             <img id="starfish" src="img/starfish.jpg" alt="">
-            <video id="video" autoplay loop="true" src="video/molas.mp4" webkit-playsinline></video>
+            <video id="video" autoplay loop="true" src="video/molas1.mp4" webkit-playsinline></video>
         </a-assets>
 
         <!-- elements-->
         <a-sky class="background" src="" color="black" position="0 1 0" rotation="0 -115 0"></a-sky>
 
-        <a-video src="#video" width="16" height="9" position="0 1 -10"></a-video>
+        <!-- <a-video src="#video" width="16" height="9" position="0 1 -10"></a-video> -->
 
         <a-box class="box-penguin" width="3" height="3" depth="0.1" position="0 2 5" src="#penguin">
             <a-text value="Portugal" width="3" position="0 1 5" style="background-color:brown"> </a-text>
@@ -51,7 +51,7 @@
         var box = document.querySelector('.box-penguin');
         var background = document.querySelector('.background');
         box.addEventListener("click", function () {
-            background.setAttribute("src", "./video/galus.mp4");
+            background.setAttribute("src", "./video/1200.mp4");
             background.setAttribute("color", "transparent");
         });
     </script>
