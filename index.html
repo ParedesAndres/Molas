@@ -22,13 +22,17 @@
             <img id="penguin" src="img/penguin.jpg" alt="">
             <img id="sloth" src="img/sloth.jpg" alt="">
             <img id="starfish" src="img/starfish.jpg" alt="">
-            <video id="video" autoplay loop="true" src="video/1200.mp4" webkit-playsinline playsinline></video>
+            <!--<video id="video" src="video/1200.mp4"></video>-->
+            <!--<video id="video" autoplay loop="true" src="video/1200.mp4" webkit-playsinline playsinline></video>-->
         </a-assets> 
 
-        <a-videosphere class="background" src="#video" position="0 1 0" rotation="0 -115 0"></a-videosphere>
+        <a-videosphere class="background" src="./img/Video1.PNG" position="0 1 0" rotation="0 -115 0"></a-videosphere>
 
         <!--First Interaction-->
-        <!--<a-box class="box-interaction" material="side: double; color: #EF2D5E; transparent: true; opacity: 0.5" width="1" height="1" depth="0.1" position="0  2 -5"></a-box>-->
+        
+
+        
+        
 
         <!-- elements-->
         <!--<a-sky class="background" src="#video" position="0 1 0" rotation="0 -115 0"></a-sky>-->
@@ -89,7 +93,7 @@
             world.innerHTML = content;
         });*/
 
-        box.addEventListener("click", function () {
+        /*box.addEventListener("click", function () {
             background.setAttribute("src", "./video/Video2.mp4");
         });
 
@@ -103,6 +107,24 @@
 
         boxCuatro.addEventListener("click", function () {
             background.setAttribute("src", "./video/1200.mp4");
+        });*/
+
+
+
+        box.addEventListener("click", function () {
+            background.setAttribute("src", "./img/Video2.PNG");
+        });
+
+        boxDos.addEventListener("click", function () {
+            background.setAttribute("src", "./img/Video3.PNG");
+        });
+
+        boxTres.addEventListener("click", function () {
+            background.setAttribute("src", "./img/Video5.PNG");
+        });
+
+        boxCuatro.addEventListener("click", function () {
+            background.setAttribute("src", "./img/Video1.PNG");
         });
 
         });
