@@ -46,6 +46,11 @@
         <a-box class="box-starfish" width="3" height="3" depth="0.1" position="4 2 5" src="#starfish">
             <a-text value="Portugal" width="3" position="0 1 5"></a-text>
         </a-box>
+ <!--
+<a-text value="Portugal" width="3" position="0 1 5"></a-text>
+ -->
+        <a-box class="box-s"  material="side: double; color: #EF2D5E; transparent: true; opacity: 0" width="3" height="3" depth="0.1" position="0 0 0" rotation="90"></a-box>
+
 
         <!--Control-->
         <a-camera position="0 1 0">
@@ -60,6 +65,7 @@
         var box = document.querySelector('.box-penguin');
         var boxDos = document.querySelector('.box-sloth');
         var boxTres = document.querySelector('.box-starfish');
+        var boxCuatro = document.querySelector('.box-s');
         var background = document.querySelector('.background');
         /*var content = `<a-scene id="canvas" class="fullscreen" color="black">
         <a-assets>
@@ -92,7 +98,11 @@
         });
 
         boxTres.addEventListener("click", function () {
-            background.setAttribute("src", "./video/video4.mp4");
+            background.setAttribute("src", "./video/video5.mp4");
+        });
+
+        boxCuatro.addEventListener("click", function () {
+            background.setAttribute("src", "./video/1200.mp4");
         });
 
         });
